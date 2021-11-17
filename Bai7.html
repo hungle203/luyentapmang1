@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Nhập vào số lượng của phần tử: ");
+    let array = new Array(number);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt("Nhập phần tử thứ " + (i + 1) + " : ")
+    }
+    let numberinput = +prompt("Nhập vào giá trị muốn kiểm tra: ")
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === numberinput) {
+            array.splice(i,1)
+            array.push(0)
+            i--
+
+        }
+    }alert(array)
+</script>
+</body>
+</html>
